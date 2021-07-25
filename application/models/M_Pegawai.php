@@ -21,4 +21,8 @@ class M_Pegawai extends CI_Model{
         );
         $this->db->insert('pegawai',$data);
     }
+
+    function tampil_data(){
+        return $this->db->get('pegawai');
+    }
 }

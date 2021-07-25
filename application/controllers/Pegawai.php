@@ -40,4 +40,38 @@ class Pegawai extends CI_Controller{
         $this->pegawai->simpan_pegawai($nip,$nama_pegawai,$url,$image_name); //simpan ke database
         redirect('pegawai'); //redirect ke pegawai usai simpan data
     }
+
+     function pdf(){
+      
+
+        $this->load->library('dompdf_gen');
+        $data['pegawai'] = $this->pegawai->tampil_data("pegawai")->result();
+        //$this->load->view('print_pegawai', $data);
+
+        $this->load->view('laporan_pdf',$data);
+
+
+        $paper_size = 'A4';
+        $orientation = 'potrait';
+        $dompdf     = new Dompdf(array('enable_remote' => true));
+
+        $html = $this->output->get_output();
+        
+        $this->dompdf->set_paper($paper_size, $orientation);
+
+        $this->dompdf->load_html($html);
+
+        $this->dompdf->render();
+        $this->dompdf->stream("data_pegawai.pdf", array('Attachment' =>0));
+    }
+
+      function print_pegawai(){
+
+        $data['pegawai'] = $this->pegawai->tampil_data("pegawai")->result();
+
+        $this->load->view('v_print',$data);
+    }
+
+
+
 }
