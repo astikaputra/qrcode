@@ -25,4 +25,10 @@ class M_Pegawai extends CI_Model{
     function tampil_data(){
         return $this->db->get('pegawai');
     }
+
+    function getPegawaiDetail($pegawai_id){
+        $this->db->where('pegawai_id',$pegawai_id);
+        $query = $this->db->get('pegawai');
+        return $query->row();
+    }
 }

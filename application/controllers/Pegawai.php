@@ -72,6 +72,37 @@ class Pegawai extends CI_Controller{
         $this->load->view('v_print',$data);
     }
 
+    function print_pegawai_detail($pegawai_id){
+        // $queryPegawaiDetail = $this->pegawai->getPegawaiDetail($pegawai_id);
+        // $DATA =  array('queryPgwDetail' => $queryPegawaiDetail);
+        // // echo "<pre>";
+        // // print_r($queryPegawaiDetail);
+        // // echo"</pre>";
+        // $this->load->view('v_detail_pegawai_pdf', $DATA);
+
+
+        $this->load->library('dompdf_gen');
+        $queryPegawaiDetail = $this->pegawai->getPegawaiDetail($pegawai_id);
+        $data =  array('queryPgwDetail' => $queryPegawaiDetail);
+
+        $this->load->view('v_detail_pegawai_pdf',$data);
+
+
+        $paper_size = 'A4';
+        $orientation = 'potrait';
+        $dompdf     = new Dompdf(array('enable_remote' => true));
+
+        $html = $this->output->get_output();
+        
+        $this->dompdf->set_paper($paper_size, $orientation);
+
+        $this->dompdf->load_html($html);
+
+        $this->dompdf->render();
+        $this->dompdf->stream("data_pegawai.pdf", array('Attachment' =>0));
+
+    }
+
 
 
 }
