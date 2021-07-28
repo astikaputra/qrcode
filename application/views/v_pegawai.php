@@ -30,6 +30,7 @@
                         <td style="vertical-align: middle;"><?php echo $row->nama_pegawai;?></td>
                         <td style="vertical-align: middle;"><?php echo $row->url;?></td>
                         <td><img style="width: 100px;" src="<?php echo base_url().'assets/images/'.$row->qr_code;?>"></td>
+                         <td> <a class="btn btn-warning" href="<?php echo base_url('pegawai/print_pegawai_view')?>/<?php echo $row->pegawai_id ?>"</a>GENERATE</td>
                         <td> <a class="btn btn-danger" href="<?php echo base_url('pegawai/print_pegawai_detail')?>/<?php echo $row->pegawai_id ?>"</a>PDF</td>
                          <td class="btn btn-danger" href="<?php echo base_url('pegawai/email') ?>"> <i class="fa fa-file"></i> EMAIL </td>
                     </tr>
