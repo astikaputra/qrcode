@@ -2,18 +2,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Membuat QR Code CodeIgniter 3</title>
+    <title>C-Testing Formulir</title>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/css/bootstrap.css'?>">
 </head>
 <body>
     <div class="container">
         <div class="row">
 		<form>
-         <h2>MOHON INPUTKAN DATA DENGAN BENAR !!</h2><hr>
+         <center> <h2>Formulir Screening Kesehatan Rencana Swab/ Screening Form for Swab test Preparation</h2><hr> </center>
+
+         <h5> Mohon diisi dengan lengkap sesuai identitas / Please fill all of the question
+Petugas kami membutuhkan fotokopi identitas anda sebanyak 2 lembar / our staff also need 2 copies of your id (Passport or kitas)> </h5> 
+		<h5> * Wajib </h5>
 		<div class="form-group">
-			<label for="nama">Nama</label>
+			<label for="nama">Nama Lengkap / Full name *</label>
 				<input type="text" id="nama" class="form-control" placeholder="Contoh form text ...">
 		</div>
+
+		<div class="form-group">
+			<label for="no_ktp">Nomor KTP (harus diisi bila WNI, nomor passport dapat ditambahkan sebelahnya) / Passport Number (ID number) , Mohon tambahkan spasi setelah angka/huruf PERTAMA / Please add space after FIRST letter or number, example : 1 23456 or B 987654321 *</label>
+				<input type="text" id="no_ktp" class="form-control" placeholder="example : 1 23456 or B 987654321">
+		</div>
+
+			<div class="form-row">
+		<div class="form-group col-md-4">
+			<label for="contoh1">Nama Ayah</label>
+			<input type="text" class="form-control" id="contoh1" placeholder="Nama Ayah">
+		</div>
+		<div class="form-group col-md-4">
+			<label for="contoh2">Pekerjaan Ayah</label>
+			<input type="text" class="form-control" id="contoh2" placeholder="Pekerjaan Ayah">
+		</div>
+		<div class="form-group col-md-4">
+			<label for="contoh2">Alamat Ayah</label>
+			<input type="text" class="form-control" id="contoh2" placeholder="Alamat Ayah">
+		</div>
+	</div>
 		 
 		<div class="form-group">
 				<label for="umur">Umur</label>

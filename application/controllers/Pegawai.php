@@ -141,6 +141,7 @@ class Pegawai extends CI_Controller{
         $queryPegawaiDetail = $this->pegawai->getPegawaiDetail($pegawai_id);
         $DATA =  array('queryPgwDetail' => $queryPegawaiDetail);
 
+        //mengambil link url saat digenerate jadi qrcode
         $dataBarcode = current_url();
 
         $this->load->library('ciqrcode'); //pemanggilan library QR CODE
