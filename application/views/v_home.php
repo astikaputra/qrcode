@@ -64,8 +64,16 @@
 					<input type="checkbox" class="custom-control-input" id="inline2">
 					<label class="custom-control-label" for="inline2">Pilihan 2</label>
 				</div>
+
+
 		    </div>
+
+		    <hr>
+
+		    <button type="submit" class="btn btn-primary">Submit</button>
+
    		 </div>
+
 		 
 		  </form>
  
