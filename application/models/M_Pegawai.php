@@ -22,7 +22,11 @@ class M_Pegawai extends CI_Model{
         $this->db->insert('pegawai',$data);
     }
 
-    function tampil_data(){
+    // function edit_data($where,$table){      
+    //     return $this->db->get_where($table,$where);
+    // }
+    
+        function tampil_data(){
         return $this->db->get('pegawai');
     }
 
@@ -30,5 +34,23 @@ class M_Pegawai extends CI_Model{
         $this->db->where('pegawai_id',$pegawai_id);
         $query = $this->db->get('pegawai');
         return $query->row();
+    }
+
+      function getTablename($pegawai_id){
+        $this->db->where('pegawai_id',$pegawai_id);
+        $query = $this->db->get('pegawai');
+        return $query->row();
+    }
+
+    function proses_edit_qrcode($pegawai_id, $image_name) 
+    {
+       $data = array(
+       'qr_code' => $image_name
+       );
+
+        $this->db->where('pegawai_id', $pegawai_id);
+        $this->db->update('pegawai', $data);
+
+  //  return;
     }
 }

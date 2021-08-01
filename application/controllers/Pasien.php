@@ -8,8 +8,7 @@ class Pasien extends CI_Controller{
     }
  
     function index(){
-        $data['data']=$this->pegawai->get_all_pegawai();
-        $this->load->view('v_pasien',$data);
+        $this->load->view('v_home');
     }
  
     function simpan(){

@@ -17,6 +17,7 @@
 			<td><?php echo $queryPgwDetail->nama_pegawai ?></td>
 			<td><?php echo $queryPgwDetail->url ?></td>
 			<td><img style="width: 200px;" src="assets/images/<?=$queryPgwDetail->qr_code?>"></td>
+			<!--<td><img style="width: 100px;" src="<?php echo base_url().'assets/images/'.$queryPgwDetail->qr_code;?>"></td>-->
 		</tr>
 
 	</table>
