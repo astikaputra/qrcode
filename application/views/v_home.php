@@ -24,6 +24,13 @@ Petugas kami membutuhkan fotokopi identitas anda sebanyak 2 lembar / our staff a
 				<input type="text" id="no_ktp" class="form-control" placeholder="example : 1 23456 or B 987654321">
 		</div>
 
+			<div class="input-group date" data-provide="datepicker">
+			   <input type="text" class="form-control">
+			    <div class="input-group-addon">
+			        <span class="glyphicon glyphicon-th"></span>
+			    </div>
+			</div>
+
 			<div class="form-row">
 		<div class="form-group col-md-4">
 			<label for="contoh1">Nama Ayah</label>
@@ -98,7 +105,7 @@ Petugas kami membutuhkan fotokopi identitas anda sebanyak 2 lembar / our staff a
 
    		 </div>
 
-		 
+<!-- https://gedelumbung.com/tutorial-codeigniter-membuat-helper-untuk-format-tanggal-indonesia-di-codeigniter/		 --> 
 		  </form>
  
     <script type="text/javascript" src="<?php echo base_url().'assets/js/jquery-3.4.1.min.js'?>"></script>
