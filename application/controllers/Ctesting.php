@@ -4,11 +4,11 @@ class Ctesting extends CI_Controller{
     
     function __construct(){
         parent::__construct();
-        $this->load->model(array('M_Ctesting'  => 'm_ctesting'));
+       // $this->load->model(array('M_Ctesting'  => 'm_ctesting'));
     }
  
     function index(){
-      $this->load->view('v_ctesting');
+      $this->load->view('v_home');
     }
  
    
