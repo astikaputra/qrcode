@@ -127,9 +127,6 @@
 		    </div>
 		</div>
 
-<<<<<<< HEAD
-	
-
 		<div class="form-row">
 			<div class="form-group col-md-7">
 			<b><label for="pembayaran">Jenis Pembayaran :</label></b>
@@ -238,7 +235,8 @@
 		    
    		 </div>
 
-<!-- https://gedelumbung.com/tutorial-codeigniter-membuat-helper-untuk-format-tanggal-indonesia-di-codeigniter/		 --> 
+<!-- https://gedelumbung.com/tutorial-codeigniter-membuat-helper-untuk-format-tanggal-indonesia-di-codeigniter/		 -->
+ 
 		  </form>
 
     <script type="text/javascript" src="<?php echo base_url().'assets/js/jquery-3.4.1.min.js'?>"></script>

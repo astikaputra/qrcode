@@ -7,19 +7,32 @@ class M_Pegawai extends CI_Model{
         $this->load->database();
     }
 
-    function get_all_pegawai(){
-        $hasil=$this->db->get('pegawai');
+    function get_all_screening(){
+        $hasil=$this->db->get('screening');
         return $hasil;
     }
      
-    function simpan_pegawai($nip,$nama_pegawai,$url,$image_name){
+    function simpan_screening($status_pasien,$jenis_kelamin,$nama,$jenis_identitas,$nomor_identitas,$tempat_lahir,$tanggal_lahir,$umur,$no_tel,$alamat,$suhu,$gejala,$diagnosa,$type_bayar,$status,$update_on,$update_by){
         $data = array(
-            'nip'       => $nip,
-            'nama_pegawai'      => $nama_pegawai,
-            'url'      => $url,
-            'qr_code'   => $image_name
+            'status_pasien'       => $status_pasien,
+            'jenis_kelamin'      => $jenis_kelamin,
+            'nama'      => $nama,
+            'jenis_identitas'   => $jenis_identitas,
+            'nomor_identitas'       => $nomor_identitas,
+            'tempat_lahir'      => $tempat_lahir,
+            'tanggal_lahir'      => $tanggal_lahir,
+            'umur'   => $umur,
+            'no_tel'      => $no_tel,
+            'alamat'   => $alamat,
+            'suhu'       => $suhu,
+            'gejala'      => $gejala,
+            'diagnosa'      => $diagnosa,
+            'type_bayar'   => $type_bayar,
+            'status'   => $status,
+            'update_on'       => $update_on,
+            'update_by'      => $update_by
         );
-        $this->db->insert('pegawai',$data);
+        $this->db->insert('screening',$data);
     }
 
     // function edit_data($where,$table){      
@@ -27,10 +40,10 @@ class M_Pegawai extends CI_Model{
     // }
     
         function tampil_data(){
-        return $this->db->get('pegawai');
+        return $this->db->get('screening');
     }
 
-    function getPegawaiDetail($pegawai_id){
+    function getScreeningDetail($pegawai_id){
         $this->db->where('pegawai_id',$pegawai_id);
         $query = $this->db->get('pegawai');
         return $query->row();
