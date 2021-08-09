@@ -39,7 +39,7 @@ class Pegawai extends CI_Controller{
  
         $this->pegawai->simpan_pegawai($nip,$nama_pegawai,$url,$image_name); //simpan ke database
         redirect('pegawai'); //redirect ke pegawai usai simpan data
-    }
+         }
 
         // function proses_edit_qrcode($pegawai_id){
         //     $this->pegawai->proses_edit_qrcode($image_name);

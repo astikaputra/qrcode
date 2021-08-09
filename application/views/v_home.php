@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <div class="row">
-		<form>
+		<form action="<?php echo base_url().'ctesting/simpan'?>" method="post">
          <center> <h2>Formulir Screening Kesehatan Rencana Swab Antigen</h2> </center>
 		
 		 <hr>
@@ -20,13 +20,13 @@
         <div class="form-row">
 		<div class="form-group col-md-4">
 		<div class="custom-control custom-radio">
-					<input type="radio" id="ContohRadio1" name="ContohRadio" class="custom-control-input">
+					<input type="radio" id="ContohRadio1" name="status_pasien" class="custom-control-input">
 					<label class="custom-control-label" for="ContohRadio1">Ya</label>
 		</div>
 		</div>
 		<div class="form-group col-md-4">
 		<div class="custom-control custom-radio">
-					<input type="radio" id="ContohRadio2" name="ContohRadio" class="custom-control-input">
+					<input type="radio" id="ContohRadio2" name="status_pasien" class="custom-control-input">
 					<label class="custom-control-label" for="ContohRadio2">Tidak</label>
 		</div> 
 		</div>
@@ -34,11 +34,11 @@
 
 		<div class="form-row">
 		<div class="form-group col-md-4">
-		<b><label for="jeniskelamin">Jenis Kelamin :</label></b>
-				<select id="jeniskelamin" class="form-control">
-					<option value="">- Pilih Jenis Kelamin</option>
-					<option value="">Laki - Laki</option>
-					<option value="">Perempuan</option>
+		<b><label for="jenis_kelamin">Jenis Kelamin :</label></b>
+				<select id="jenis_kelamin" name=jenis_kelamin" class="form-control">
+					<option value="0">- Pilih Jenis Kelamin</option>
+					<option value="1">Laki - Laki</option>
+					<option value="2">Perempuan</option>
 				</select>
 		</div>
 		<div class="form-group col-md-4">
@@ -49,17 +49,17 @@
 
 		<div class="form-row">
 			<div class="form-group col-md-4">
-			<b><label for="pekerjaan">Jenis Identitas :</label></b>
-					<select id="pekerjaan" class="form-control">
+			<b><label for="jenis_identitas">Jenis Identitas :</label></b>
+					<select id="jenis_identitas" class="form-control">
 						<option value="">- Pilih Identitas</option>
-						<option value="">KTP</option>
-						<option value="">SIM</option>
-						<option value="">Passport</option>
+						<option value="1">KTP</option>
+						<option value="2">SIM</option>
+						<option value="3">Passport</option>
 					</select>
 			</div>
 		<div class="form-group col-md-4">
-		<b><label for="nama">Nomor Identitas :</label></b>
-				<input type="text" id="no_id" class="form-control" placeholder="">
+		<b><label for="nomor_identitas">Nomor Identitas :</label></b>
+				<input type="text" id="nomor_identitas" class="form-control" placeholder="">
 		</div>
 		</div>
 
@@ -69,15 +69,15 @@
 				<input type="text" id="tempat_lahir" class="form-control" placeholder="">
 			</div>
 			<div class="form-group col-md-5">
-				<b><label for="contoh1">Tanggal Lahir :</label></b>
-				<input type="text" name="tgl" id="tgl" class="form-control">
+				<b><label for="tanggal_lahir">Tanggal Lahir :</label></b>
+				<input type="text" name="tanggal_lahir" id="tanggal_lahir" class="form-control">
 			</div>
 		</div>		
    		
    		<div class="form-row">
 		<div class="form-group col-md-10">
 		<b> <label for="nama">Nomor Telepone :</label></b>
-				<input type="text" id="no_telpon" class="form-control" placeholder="">
+				<input type="text" id="no_tel" class="form-control" placeholder="">
 		</div>
 		</div>
 
@@ -100,10 +100,10 @@
 		<b><label for="gejala">Apakah anda mengalami salah satu gejala di bawah ini dalam dua minggu terakhir?</label></b>
 		<select id="gejala" class="form-control">
 						<option value="">- Pilih Jenis Gejala</option>
-						<option value="">Tidak Ada</option>
-						<option value="">Meriang</option>
-						<option value="">Pusing</option>
-						<option value="">Sakit Kepala</option>
+						<option value="0">Tidak Ada</option>
+						<option value="1">Meriang</option>
+						<option value="2">Pusing</option>
+						<option value="3">Sakit Kepala</option>
 					</select>
 			</div>
 		</div>
@@ -111,7 +111,7 @@
 
 		<div class="form-row">
 		<div class="form-group col-md-10">
-		<b><label for="suhu">Apakah anda pernah bertemu dengan pasien yang terdiagnosa COVID-19 dalam dua minggu terakhir?</label></b>
+		<b><label for="diagnosa">Apakah anda pernah bertemu dengan pasien yang terdiagnosa COVID-19 dalam dua minggu terakhir?</label></b>
 		</div>
 			<div class="form-group col-md-4">
 			  <div class="custom-control custom-radio">
@@ -129,13 +129,13 @@
 
 		<div class="form-row">
 			<div class="form-group col-md-7">
-			<b><label for="pembayaran">Jenis Pembayaran :</label></b>
-			<select id="pembayaran" class="form-control">
+			<b><label for="type_bayar">Jenis Pembayaran :</label></b>
+			<select id="type_bayar" class="form-control">
 						<option value="">- Pilih Jenis Pembayaran</option>
-						<option value="">CASH</option>
-						<option value="">DEBIT</option>
-						<option value="">PERUSAHAAN</option>
-						<option value="">ASURANSI</option>
+						<option value="0">CASH</option>
+						<option value="1">DEBIT</option>
+						<option value="2">PERUSAHAAN</option>
+						<option value="3">ASURANSI</option>
 					</select>
 		</div>
 		</div>
@@ -243,7 +243,7 @@
     <script type="text/javascript" src="<?php echo base_url().'assets/js/bootstrap.js'?>"></script>    
 	<script type="text/javascript" src="<?php echo base_url().'assets/js/bootstrap-datepicker.js'?>"></script>	
 	<script>
-      $('#tgl').datepicker({
+      $('#tanggal_lahir').datepicker({
       	format: 'yyyy-mm-dd',
       });
     </script>
