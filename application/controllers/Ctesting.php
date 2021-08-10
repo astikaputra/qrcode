@@ -30,8 +30,11 @@ class Ctesting extends CI_Controller{
         $update_by=$this->input->post('update_by');
 
         $this->screening->simpan_screening($status_pasien,$jenis_kelamin,$nama,$jenis_identitas,$nomor_identitas,$tempat_lahir,$tanggal_lahir,$umur,$no_tel,$alamat,$suhu,$gejala,$diagnosa,$type_bayar,$status,$update_on,$update_by); //simpan ke database
-        redirect('ctesting'); //redirect ke pegawai usai simpan data
+        redirect('ctesting/sukses_simpan'); //redirect ke pegawai usai simpan data
     }
    
+    function sukses_simpan(){
+      $this->load->view('v_sukses_simpan');
+    }
 
 }

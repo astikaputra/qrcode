@@ -12,7 +12,8 @@ class M_Ctesting extends CI_Model{
         return $hasil;
     }
      
-    function simpan_screening($status_pasien,$jenis_kelamin,$nama,$jenis_identitas,$nomor_identitas,$tempat_lahir,$tanggal_lahir,$umur,$no_tel,$alamat,$suhu,$gejala,$diagnosa,$type_bayar,$status,$update_on,$update_by){
+   function simpan_screening($status_pasien,$jenis_kelamin,$nama,$jenis_identitas,$nomor_identitas,$tempat_lahir,$tanggal_lahir,$umur,$no_tel,$alamat,$suhu,$gejala,$diagnosa,$type_bayar,$status,$update_on,$update_by){
+    // function simpan_screening($status_pasien,$jenis_kelamin,$nama,$jenis_identitas,$nomor_identitas,$tempat_lahir,$tanggal_lahir,$umur,$no_tel,$alamat,$gejala,$suhu,$diagnosa,$type_bayar,$status){
         $data = array(
             'status_pasien'       => $status_pasien,
             'jenis_kelamin'      => $jenis_kelamin,
@@ -39,7 +40,7 @@ class M_Ctesting extends CI_Model{
     //     return $this->db->get_where($table,$where);
     // }
     
-        function tampil_data(){
+    function tampil_data(){
         return $this->db->get('screening');
     }
 

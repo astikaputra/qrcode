@@ -35,7 +35,7 @@
 		<div class="form-row">
 		<div class="form-group col-md-4">
 		<b><label for="jenis_kelamin">Jenis Kelamin :</label></b>
-				<select id="jenis_kelamin" name=jenis_kelamin" class="form-control">
+				<select id="jenis_kelamin" name="jenis_kelamin" class="form-control">
 					<option value="0">- Pilih Jenis Kelamin</option>
 					<option value="1">Laki - Laki</option>
 					<option value="2">Perempuan</option>
@@ -43,14 +43,14 @@
 		</div>
 		<div class="form-group col-md-4">
 		<b><label  for="nama">Nama Pendaftar :</label></b>
-				<input type="text" id="nama" class="form-control" placeholder="">
+				<input type="text" id="nama" name="nama" class="form-control" placeholder="">
 		</div>
 		</div>
 
 		<div class="form-row">
 			<div class="form-group col-md-4">
 			<b><label for="jenis_identitas">Jenis Identitas :</label></b>
-					<select id="jenis_identitas" class="form-control">
+					<select id="jenis_identitas" name="jenis_identitas" class="form-control">
 						<option value="">- Pilih Identitas</option>
 						<option value="1">KTP</option>
 						<option value="2">SIM</option>
@@ -59,14 +59,14 @@
 			</div>
 		<div class="form-group col-md-4">
 		<b><label for="nomor_identitas">Nomor Identitas :</label></b>
-				<input type="text" id="nomor_identitas" class="form-control" placeholder="">
+				<input type="text" id="nomor_identitas" name="nomor_identitas" class="form-control" placeholder="">
 		</div>
 		</div>
 
 		<div class="form-row">
 			<div class="form-group col-md-5">
 				<b> <label for="tempat_lahir">Tempat Lahir :</label></b>
-				<input type="text" id="tempat_lahir" class="form-control" placeholder="">
+				<input type="text" id="tempat_lahir" name="tempat_lahir" class="form-control" placeholder="">
 			</div>
 			<div class="form-group col-md-5">
 				<b><label for="tanggal_lahir">Tanggal Lahir :</label></b>
@@ -76,29 +76,29 @@
    		
    		<div class="form-row">
 		<div class="form-group col-md-10">
-		<b> <label for="nama">Nomor Telepone :</label></b>
-				<input type="text" id="no_tel" class="form-control" placeholder="">
+		<b> <label for="no_tel">Nomor Telepone :</label></b>
+				<input type="text" id="no_tel" name="no_tel" class="form-control" placeholder="">
 		</div>
 		</div>
 
 		<div class="form-row">
 		<div class="form-group col-md-10">
 		<b><label for="alamat">Alamat :</label></b>
-				<input type="text" id="alamat" class="form-control" placeholder="">
+				<input type="text" id="alamat" name="alamat" class="form-control" placeholder="">
 		</div>
 		</div>
 
 		<div class="form-row">
 		<div class="form-group col-md-10">
 		<b><label for="suhu">Suhu tubuh saat sampai di XXX</label></b>
-				<input type="text" id="suhu" class="form-control" placeholder="">
+				<input type="text" id="suhu" name="suhu" class="form-control" placeholder="">
 		</div>
 		</div>
 
 		<div class="form-row">
 		<div class="form-group col-md-10">
 		<b><label for="gejala">Apakah anda mengalami salah satu gejala di bawah ini dalam dua minggu terakhir?</label></b>
-		<select id="gejala" class="form-control">
+		<select id="gejala" name="gejala" class="form-control">
 						<option value="">- Pilih Jenis Gejala</option>
 						<option value="0">Tidak Ada</option>
 						<option value="1">Meriang</option>
@@ -130,7 +130,7 @@
 		<div class="form-row">
 			<div class="form-group col-md-7">
 			<b><label for="type_bayar">Jenis Pembayaran :</label></b>
-			<select id="type_bayar" class="form-control">
+			<select id="type_bayar" name="type_bayar" class="form-control">
 						<option value="">- Pilih Jenis Pembayaran</option>
 						<option value="0">CASH</option>
 						<option value="1">DEBIT</option>
