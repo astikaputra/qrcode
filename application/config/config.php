@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/qrcode/';
+$config['base_url'] = 'http://10.83.132.17/doctor-rep/';
 
 /*
 |--------------------------------------------------------------------------
